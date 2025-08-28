@@ -13,7 +13,7 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 
 
-COPY pyproject.toml poetry.lock ./
+COPY . .
 
 
 RUN pip install poetry
