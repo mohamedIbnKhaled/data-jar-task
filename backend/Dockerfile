@@ -2,8 +2,11 @@ FROM python:3.10-slim-buster
 
 WORKDIR /app
 
-RUN apt-get update --fix-missing && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+# Update package lists in a separate step for better caching and clarity
+RUN apt-get update --fix-missing
+
+# Install system dependencies
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     build-essential \
     libpq-dev \
     gcc \
