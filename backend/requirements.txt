@@ -1,9 +1,0 @@
-fastapi
-uvicorn[standard]
-python-dotenv
-chardet
-google-generativeai
-sqlalchemy
-aiosqlite
-asyncpg
-python-multipart
