@@ -11,8 +11,8 @@ export default function HomePage() {
   const [error, setError] = useState('');
   const [activeInput, setActiveInput] = useState('file');
 
-  const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://backend:8000';
-  
+  const API_BASE_URL = "http://ec2-51-20-114-212.eu-north-1.compute.amazonaws.com:8000"
+
   const handleFileChange = (event) => {
     setSlidesAndTheme(null);
     setError('');
