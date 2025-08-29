@@ -11,7 +11,7 @@ export default function HomePage() {
   const [error, setError] = useState('');
   const [activeInput, setActiveInput] = useState('file');
 
-  const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8000';
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || '8000';
 
   const handleFileChange = (event) => {
     setSlidesAndTheme(null);
