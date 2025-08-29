@@ -7,7 +7,11 @@ app = FastAPI(
     title="Markdown-to-Slides Agent"
 )
 
-origins = ["http://localhost:3000", "http://127.0.0.1:3000"]
+origins = [
+    "http://localhost:3000",
+    "http://172.19.0.4:3000", 
+    "http://ec2-51-20-114-212.eu-north-1.compute.amazonaws.com:3000/"
+]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
