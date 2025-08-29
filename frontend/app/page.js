@@ -11,7 +11,7 @@ export default function HomePage() {
   const [error, setError] = useState('');
   const [activeInput, setActiveInput] = useState('file');
 
-  const API_BASE_URL = 'http://127.0.0.1:8000';
+  const API_BASE_URL = 'http://0.0.0.0:8000';
 
   const handleFileChange = (event) => {
     setSlidesAndTheme(null);
@@ -313,7 +313,6 @@ export default function HomePage() {
 
         <Transition
           show={!!slidesAndTheme}
-          // The fix: Change 'as={React.Fragment}' to 'as="div"'
           as="div" 
           enter="transition-opacity duration-500"
           enterFrom="opacity-0"
