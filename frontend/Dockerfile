@@ -2,12 +2,15 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
+ARG NEXT_PUBLIC_API_BASE_URL
+
 COPY package.json package-lock.json ./
 
 RUN npm install --frozen-lockfile
 
 COPY . .
 
+ENV NEXT_PUBLIC_API_BASE_URL=$NEXT_PUBLIC_API_BASE_URL
 RUN npm run build
 
 FROM node:18-alpine AS runner
