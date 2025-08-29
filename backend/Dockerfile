@@ -2,10 +2,12 @@ FROM python:3.10-slim-buster
 
 WORKDIR /app
 
-# Update package lists in a separate step for better caching and clarity
+
+RUN echo "deb http://deb.debian.org/debian buster main\ndeb http://deb.debian.org/debian buster-updates main\ndeb http://security.debian.org/debian-security buster/updates main" > /etc/apt/sources.list
+
+
 RUN apt-get update --fix-missing
 
-# Install system dependencies
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
     build-essential \
     libpq-dev \
