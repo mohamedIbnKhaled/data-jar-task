@@ -103,7 +103,7 @@ LIMIT 10;
 ## Video Tutorial
 
 Watch this video to learn how to use the project:  
-![demo video](https://github.com/mohamedIbnKhaled/data-jar-task/blob/main/demo.mkv)
+![demo video](http://github.com/mohamedIbnKhaled/data-jar-task/blob/main/demo.mkv)
 
 ---
 
